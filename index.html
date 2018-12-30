@@ -1,38 +1,4 @@
-<?php include("includes/connection.php");
-      require("includes/function.php");
-      //include("includes/session_check.php");
-      
-      //Get file name
-      /*$currentFile = $_SERVER["SCRIPT_NAME"];
-      $parts = Explode('/', $currentFile);
-      $currentFile = $parts[count($parts) - 1];*/       
-  if(isset($_POST['create_account']))
-  {
-  
-       
  
-          
-       $data = array( 
-          
-         'email'  =>  $_POST['email'],
-         
-         'password'  =>  $_POST['password'],
-         'status'=> 0
-          );    
-
-       $qry = Insert('user',$data);  
- 
-
-    //$_SESSION['msg']="10";
- 
-    header( "Location:index.php?msg=add");
-    exit; 
-
-     
-    
-  }     
-      
-?>
 <!doctype html>
 <html
   class=""
@@ -66,41 +32,7 @@
   <link href="assets/css/site-de6214c7.css" rel="stylesheet" />
 
 <link rel="stylesheet" href="assets/css/cookieConsent.css">
-<script>
-  window.cookieDomain = '.digitalocean.com';
-  window.googleMapsApiKey = 'AIzaSyCSKmGpLScyml6i3_YOoKoE7UCUeYs-H0k';
-</script>
-<script src="assets/js/cookieConsent.js"></script>
-
-  <script>
-    !function(){
-      if(document.cookie.indexOf('cookieconsent_status=dismiss') > -1) {
-        var script = document.createElement("script");
-        script.id = "hiconversion_30";
-        script.async = "async";
-        script.type = "text/javascript";
-        script.src = "//h30-deploy.hiconversion.com/origin/tag/8WAyga1p";
-        var nodes = document.getElementsByTagName("script");
-        nodes[0].parentNode.insertBefore(script, nodes[0]);
-      }
-    }();
-  </script>
-
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KHWBBT');
-  </script>
-
-  <script>
-    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t,e){var n=document.createElement("script");n.type="text/javascript";n.async=!0;n.src="https://cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(n,a);analytics._loadOptions=e};analytics.SNIPPET_VERSION="4.1.0";
-    analytics.load('eodkqsm339', (document.cookie.indexOf('cookieconsent_status=dismiss') > -1 ? {} : { integrations: { All: false, 'Segment.io': true}}));
-    analytics.page();
-    }}();
-  </script>
-
+ 
 
 
 
